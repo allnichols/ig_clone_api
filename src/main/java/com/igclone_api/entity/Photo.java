@@ -33,8 +33,7 @@ public class Photo {
     @CreationTimestamp
     private Date created_at;
 
-//    a relationship between photo and user
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @ManyToOne()
+    @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "id")
     private User user;
 }
