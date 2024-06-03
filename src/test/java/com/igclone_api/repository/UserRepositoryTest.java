@@ -19,7 +19,12 @@ class UserRepositoryTest {
     }
 
     @Test
-    public void testGetUserByUsername() {
+    public void testFindByUserName() {
+        assertEquals(0, userRepository.findByUserName("user1").size());
+    }
+
+    @Test
+    public void testFindByUserName2() {
         assertEquals(1, userRepository.findByUserName("Bethany20").size());
     }
 
