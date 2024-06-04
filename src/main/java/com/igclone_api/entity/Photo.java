@@ -1,22 +1,20 @@
 package com.igclone_api.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
 @Entity
 @Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Table(name = "photos")
 public class Photo {
-
     @Id
     @SequenceGenerator(
             name = "photo_sequence",
