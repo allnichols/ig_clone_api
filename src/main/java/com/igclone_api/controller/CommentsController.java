@@ -24,4 +24,9 @@ public class CommentsController {
     public Comments getCommentById(@PathVariable Long id) {
         return commentsService.getCommentById(id);
     }
+
+    @RequestMapping("/comments/user/{userId}")
+    public List<Comments> getCommentsByUserId(@PathVariable Long userId) {
+        return commentsService.getCommentsByUserId(userId);
+    }
 }

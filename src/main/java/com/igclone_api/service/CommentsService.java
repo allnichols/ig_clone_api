@@ -27,5 +27,12 @@ public class CommentsService {
         return commentsRepository.findById(id).orElse(null);
     }
 
+    public List<Comments> getCommentsByUserId(Long userId){
+        if(userId == null){
+            return null;
+        }
+        return commentsRepository.findCommentsByUserId(userId);
+    }
+
 
 }
