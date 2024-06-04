@@ -5,6 +5,7 @@ import com.igclone_api.repository.LikeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -21,13 +22,7 @@ public class LikeService {
     }
 
    public List<Like> getLikesByUserId(Long userId) {
-        if(userId == null) {
-            return null;
-        }
-
-        List<Like> likes = likeRepository.findLikesByUserId(userId);
-       System.out.println(likes);
-       return null;
+        return likeRepository.findLikesByUserId(userId);
    }
 
 }
