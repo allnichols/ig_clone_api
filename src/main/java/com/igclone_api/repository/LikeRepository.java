@@ -12,7 +12,7 @@ import java.util.List;
 public interface LikeRepository extends JpaRepository<Like, Long> {
 
     @Query(
-            value = "SELECT * " +
+            value = "SELECT user_id, photo_id " +
                     "FROM likes " +
                     "WHERE user_id = :userId",
             nativeQuery = true

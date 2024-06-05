@@ -19,7 +19,4 @@ public class Like {
     @EmbeddedId()
     private LikeId id;
 
-    @Column(nullable = false, updatable = false)
-    @CreationTimestamp
-    private Date created_at;
 }

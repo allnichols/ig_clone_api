@@ -22,12 +22,4 @@ public class LikeId implements Serializable {
     @JoinColumn(name = "photo_id", nullable = false, referencedColumnName = "id")
     private Photo photo;
 
-    public Long getUserId() {
-        return user.getId();
-    }
-
-    public Long getPhotoId() {
-        return user.getId();
-    }
-
 }
